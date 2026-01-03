@@ -16,7 +16,15 @@
         .rpr-red-bg {background: var(--RPR-Red) !important;}
         .rpr-orange-bg {background: var(--RPR-Orange) !important;}
         .rpr-yellow-bg {background: var(--RPR-Yellow) !important;}
-        body {margin: 0; height: 100dvh; width: 100%;}
+        .nav-pills .nav-link.active {
+            background-color: #ff370d !important;
+            color: #ffffff !important;
+        }
+        .nav-link {
+            color: #ffffff !important;
+        }
+        .nav {gap: 10px !important;}
+        body {margin: 0; height: 100%; width: 100%;}
         html {
             scroll-behavior: smooth;
         }
@@ -40,6 +48,10 @@
             background: #1e1e1ea6;
             backdrop-filter: blur(10px) saturate(150%);
             -webkit-backdrop-filter: blur(10px) saturate(150%);
+            transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+        }
+        .bg-transparent {
+            transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
         }
         .page {
             display: block;
@@ -49,12 +61,12 @@
     </style>
 </head>
 <body class="bg-transparent text-white">
-    <header class="navbar navbar-expand-lg bd-navbar sticky-top">
-        <nav id="navbar-example2" class="container-xl bd-glutter flex-warp flex-lg-nowarp custom-navbar mica-blur">
+    <header class="navbar z-5 navbar-expand-lg bd-navbar sticky-top">
+        <nav id="navbar-example2" class="container-xl bd-g  utter flex-wrap flex-lg-nowrap custom-navbar bg-transparent">
             <a class="navbar-brand" href="#">
                 <img src="Pictures/rprbg.webp" alt="RPR Logo" height="40" class="d-inline-block align-text-top">
             </a>
-            <ul class="nav nav-pills text-white">
+            <ul class="nav text-white nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="#Home">Beranda</a>
                 </li>
@@ -97,6 +109,18 @@
         </article>
     </div>
 
+    <script>
+        const NavBlur = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                NavBlur.classList.add('mica-blur');
+                NavBlur.classList.remove('bg-transparent');
+            } else {
+                NavBlur.classList.remove('mica-blur');
+                NavBlur.classList.add('bg-transparent');
+            }
+        });
+    </script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
