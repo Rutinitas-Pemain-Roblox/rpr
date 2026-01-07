@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="Pictures/logo.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <style>
         :root {
             --RPR-Red: #ff0000;
@@ -20,7 +21,18 @@
         .rpr-orange-btn:hover {background: var(--RPR-Red);}
         .rpr-yellow-btn { background: var(--RPR-Yellow) !important; }
         .rpr-yellow-btn:hover { background: var(--RPR-Orange) !important; }
-        
+        .facebook {background: #1877F2 !important;}
+        .roblox {background: #000 !important;}
+        .discord {background: #5865F2 !important;}
+        @font-face {
+            font-family: 'Builder', sans-serif;
+            src: url('BuilderSans-Regular.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            font-family: 'Builder', sans-serif !important;
+        }
         .nav-pills .nav-link.active {
             background-color: var(--RPR-Orange) !important;
             color: #ffffff !important;
@@ -40,7 +52,6 @@
         body { margin: 0; width: 100%; position: relative; }
         html { scroll-behavior: smooth; }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 0px; }
         /*::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: var(--RPR-Orange); }
@@ -84,7 +95,6 @@
             top: 0 !important;
         }
         #form-support form { width: max-content !important; height: auto !important; }
-        /* From Uiverse.io by kencode7 */ 
         .pattern {
             width: 100%;
             height: 100%;
@@ -121,13 +131,22 @@
         .logo{
             width: 80%;
         }
+        .aturan article h4 img { width: 26px !important; margin-bottom: 6px; padding-right: 2px;}          
         @media screen and (max-width: 778px) {
             .custom-navbar ul { display: none !important; }
             #m-menu { display: flex !important; }
+            .aturan { flex-direction: column !important; gap: 2dvh !important; }
+            .aturan div { justify-content: center; height: 100% !important;}
+            .aturan div img { width: 75% !important;}    
+            .aturan article {width: 75% !important;}
         }
         @media screen and (min-width: 769px) {
             #m-page { display: none !important; }
             .logo { width: 500px;}
+            .aturan { flex-direction: row !important; gap: 8dvh !important;}
+            .aturan div { justify-content: end; height: 100% !important; width: 50% !important;}
+            .aturan div img { width: 100% !important; }     
+            .aturan article { width: 75% !important;}
         }
     </style>
 </head>
@@ -209,34 +228,126 @@
 
     <div class="report d-flex flex-column mb-4 z-3 position-fixed align-items-center">
         <button id="Customer_Support" class="btn rpr-red-bg rounded-circle mb-1 shadow d-flex align-items-center justify-content-center" style="width: 4rem; height: 4rem;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="currentColor" class="bi bi-envelope d-flex" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="currentColor" class="bi bi-x d-none" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" fill="white" class="bi bi-envelope d-flex" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="2.5rem" height="2.5rem" fill="white" class="bi bi-x d-none" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
         </button>
         <span class="text-white text-center" style="font-size: 8pt;">Hubungi Kami</span>
     </div>
 
     <div class="">
         <article id="Home" class="page pattern">
-            <main class=" container h-100 w-100 align-items-center justify-content-center z-1 position-absolute top-50 start-50 translate-middle d-flex flex-column gap-2">
-
-                <img src="Pictures/rprbgmaskot.webp" alt="Rutinitas Pemain Roblox" class="logo">
+            <main class="container h-100 w-100 align-items-center justify-content-center z-1 position-absolute top-50 start-50 translate-middle d-flex flex-column gap-2">
+                <img src="Pictures/rprbgmaskot.webp" alt="Rutinitas Pemain Roblox" class="logo md-1">
+                <p class="text-center">
+                    Rutinitas Pemain Roblox adalah sebuah komunitas Roblox yang berasal dari Indonesia dan salah satu entitas yang menyatukan komunitas-komunitas Indonesia di platform ini!
+                </p>
+                <h6>Join komunitas kami di</h6>
+                <section class="d-flex flex-row gap-2 align-items-center">
+                    <a href="" class="btn text-white facebook d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                        </svg>
+                        Facebook
+                    </a>
+                    <a href="" class="btn text-white roblox d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                        <img src="Pictures/Roblox_Logo.svg" height="16">
+                        Roblox
+                    </a>
+                    <a href="" class="btn text-white discord d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                        <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                        </svg>
+                        Discord
+                    </a>
+                </section>
             </main>
         </article>
         <article id="Rules" class="page d-flex flex-column align-items-center justify-content-center gap-2">
-            <h4>Second heading</h4>
-            <p>Berikut peraturan komunitas kami...</p>
+            <main class="container aturan overflow-hidden h-100 w-100 d-flex justify-content-center align-items-center">
+                <article>
+                    <h4 class="pt-2">
+                        <img src="Pictures/img_set_2x_10.png">
+                        Aturan Komunitas
+                    </h4>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at illum ea non sit expedita cum eaque iste ex, beatae atque numquam officiis neque nemo ut temporibus mollitia delectus praesentium.
+                </article>
+                <div class="d-flex align-items-center">
+                    <img src="Pictures/add_friends_graphics_x3.png">
+                </div>
+            </main>
         </article>
         <article id="Shop" class="page d-flex flex-column align-items-center justify-content-center gap-2">
-            <h4>Third heading</h4>
-            <p>Toko item Roblox terpercaya...</p>
+            <main class="container">
+
+            </main>
         </article>
         <article id="Game" class="page d-flex flex-column align-items-center justify-content-center gap-2">
-            <h4>Fourth heading</h4>
-            <p>Daftar game seru hari ini...</p>
+            <main class="container">
+
+            </main>
         </article>
-        <article id="Faq" class="page d-flex flex-column align-items-center justify-content-center gap-2">
-            <h4>Fifth heading</h4>
-            <p>Pertanyaan yang sering diajukan...</p>
+        <article id="Faq" class="page d-flex flex-column align-items-center justify-content-end gap-2">
+            <main class="container">
+                <section class="d-flex flex-column gap-3 align-items-center justify-content-stretch">
+                    <h5>Pertanyaan Umum</h5>
+                    <br>
+                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#pertanyaan1" aria-expanded="false" aria-controls="collapseExample">
+                        Pertanyaan
+                    </button>
+                    <div class="collapse" id="pertanyaan1">
+                        <div class="card card-body bg-transparent">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#pertanyaan2" aria-expanded="false" aria-controls="collapseExample">
+                        Pertanyaan
+                    </button>
+                    <div class="collapse" id="pertanyaan2">
+                        <div class="card card-body bg-transparent">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#pertanyaan3" aria-expanded="false" aria-controls="collapseExample">
+                        Pertanyaan
+                    </button>
+                    <div class="collapse" id="pertanyaan3">
+                        <div class="card card-body bg-transparent">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#pertanyaan4" aria-expanded="false" aria-controls="collapseExample">
+                        Pertanyaan
+                    </button>
+                    <div class="collapse" id="pertanyaan4">
+                        <div class="card card-body bg-transparent">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                    <button class="btn btn-primary w-100" type="button" data-bs-toggle="collapse" data-bs-target="#pertanyaan5" aria-expanded="false" aria-controls="collapseExample">
+                        Pertanyaan
+                    </button>
+                    <div class="collapse" id="pertanyaan5">
+                        <div class="card card-body bg-transparent">
+                            Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <h6 class="text-center mt-4">Jika pertanyaan anda tidak terjawab, silahkan hubungi kami melalui tombol di pojok kanan bawah halaman ini.</h6>
+                </footer>
+            </main>
         </article>
     </div>
 
