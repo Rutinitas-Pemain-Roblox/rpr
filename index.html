@@ -74,7 +74,7 @@
             min-height: 100dvh;
             width: 100%;
             padding-top: 0px;
-            /*scroll-margin-top: 80px; */
+            scroll-margin-top: 80px;
         }
         .report {
             width: max-content;
@@ -136,7 +136,8 @@
         .logo{
             width: 80%;
         }
-        .aturan article h3 img { width: 26px !important; margin-bottom: 6px; padding-right: 2px;}          
+        .aturan article h3 img { width: 26px !important; margin-bottom: 6px; padding-right: 2px;}   
+             
         @media screen and (max-width: 778px) {
             .custom-navbar ul { display: none !important; }
             #m-menu { display: flex !important; }
@@ -152,6 +153,19 @@
             .aturan div { justify-content: end; height: 100% !important; width: 50% !important;}
             .aturan div img { width: 100% !important; }     
             .aturan article { width: 75% !important;}
+            #UGC div div {
+                flex-grow: 2;
+            }
+        }
+        @media screen and (min-width: 1000px) {
+            #UGC div div a img {
+                height: 220px !important;
+            }  
+        }
+        @media screen and (max-width: 1000px) {
+            #UGC div div a img {
+                height: 120px !important;
+            } 
         }
     </style>
 </head>
@@ -194,10 +208,10 @@
                 </li>
             </ul>
             <div class="d-flex gap-2 align-items-center">
-                <a class="btn rpr-yellow-btn" href="https://trakteer.id/rprid" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dukung kami via Saweria">
+                <a class="btn rpr-yellow-btn" href="https://trakteer.id/rprid" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dukung kami via Saweria">
                     <img src="Pictures/Saweria.svg" alt="Trakteer" height="26" width="26">
                 </a>
-                <a class="btn rpr-yellow-btn" href="https://trakteer.id/rprid" target="_blank" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dukung kami via Trakteer">
+                <a class="btn rpr-yellow-btn" href="https://trakteer.id/rprid" rel="noopener noreferrer" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Dukung kami via Trakteer">
                     <img src="Pictures/Trakteer.svg" alt="Trakteer" height="26" width="26">
                 </a>
                 <button type="button" id="m-menu" class="btn rpr-orange-bg text-white d-none">
@@ -247,24 +261,24 @@
                     Rutinitas Pemain Roblox adalah sebuah komunitas Roblox yang berasal dari Indonesia dan salah satu entitas yang menyatukan komunitas-komunitas Indonesia di platform ini!
                 </p>
                 <h6>Join komunitas kami di</h6>
-                <section class="d-flex flex-row gap-2 align-items-center">
-                    <a href="https://facebook.com/groups/rutinitaspemainroblox2" class="btn p-2 shadow rounded-3 text-white facebook d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                <section class="d-flex flex-row flex-wrap justify-content-center gap-2 align-items-center">
+                    <a href="https://facebook.com/groups/rutinitaspemainroblox2" target="_blank" class="btn p-2 shadow rounded-3 text-white facebook d-flex align-items-center" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                             <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
                         </svg>
                         Facebook
                     </a>
-                    <a href="https://www.roblox.com/share/g/34098292" class="btn p-2 shadow rounded-3 text-white roblox d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.roblox.com/share/g/34098292" target="_blank" class="btn p-2 shadow rounded-3 text-white roblox d-flex align-items-center" rel="noopener noreferrer">
                         <img src="Pictures/Roblox_Logo.svg" height="24">
                         Roblox
                     </a>
-                    <a href="https://discord.gg/2vdrjMYdCa" class="btn p-2 shadow rounded-3 text-white discord d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                    <a href="https://discord.gg/2vdrjMYdCa" target="_blank" class="btn p-2 shadow rounded-3 text-white discord d-flex align-items-center" rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
                         <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
                         </svg>
                         Discord
                     </a>
-                    <a href="https://chat.whatsapp.com/IN3GVFo9yfRDdq8BQzvsT3" class="btn p-2 shadow rounded-3 text-white whatsapp d-flex align-items-center" target="_blank" rel="noopener noreferrer">
+                    <a href="https://chat.whatsapp.com/IN3GVFo9yfRDdq8BQzvsT3" target="_blank" class="btn p-2 shadow rounded-3 text-white whatsapp d-flex align-items-center"  rel="noopener noreferrer">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
                         <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
                         </svg>
@@ -274,25 +288,28 @@
             </main>
         </article>
         <article id="Rules" class="page d-flex flex-column align-items-center justify-content-center gap-2">
-            <main class="container aturan overflow-hidden h-100 w-100 d-flex justify-content-center align-items-center">
+            <main class="container aturan overflow-hidden mt-5 h-100 w-100 d-flex justify-content-center align-items-center">
                 <article>
                     <h3 class="pt-2">
                         <img src="Pictures/img_set_2x_10.png">
                         Aturan Komunitas
                     </h3>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li>Gunakan Bahasa Sopan :</li>
+                        <p>Diutamakan menggunakan bahasa Indonesia yang baik dan sopan serta beretika baik.</p>
+                        <li>Ini adalah Komunitas Roblox :</li>
+                        <p>Postingan harus tentang Roblox. Dapat berupa Meme, Roblox Studio, Info Mabar, Video Promosi, atau Screenshot yang tidak merugikan!</p>
+                        <li>Promosi Jual Beli :</li>
+                        <p class="bg-danger p-2 rounded-1" style="--bs-bg-opacity: 0.5;">
+                            <font style="color: hsl(355, 85%, 87%); font-weight: 600;">Dilarang</font>  <br>
+                            Jual beli Akun, Robux ilegal, atau barang dalam game (in-game items).
+                        </p>
+                        <p class="bg-success p-2 rounded-1" style="--bs-bg-opacity: 0.5;">
+                            <font style="color: hsl(153, 45%, 73%); font-weight: 600;">Diperbolehkan</font>  <br>
+                            Jualan jasa buat pakaian dan aksesoris, mempromosikan map/game buatan sendiri, atau jualan resmi yang tidak melanggar peraturan pusat Roblox.
+                        </p>
                     </ul>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, at illum ea non sit expedita cum eaque iste ex, beatae atque numquam officiis neque nemo ut temporibus mollitia delectus praesentium.
+                    Pastikan kamu mematuhi peraturan <a href="https://en.help.roblox.com/hc/en-us/articles/203313410-Roblox-Community-Standards" rel="noopener noreferrer" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Standar Komunitas Roblox</a>, <a href="https://www.facebook.com/community/using-key-groups-tools/understanding-community-standards" rel="noopener noreferrer" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Standar Komunitas Facebook</a>, dan <a href="https://discord.com/terms" rel="noopener noreferrer" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">Ketentuan Layanan Discord</a>.
                 </article>
                 <div class="d-flex align-items-center">
                     <img src="Pictures/add_friends_graphics_x3.png">
@@ -305,17 +322,24 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16"><path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/></svg>
                     Toko
                 </h3>
-                <label class="form-label">UGC</label>
+                <h6 class="form-label">UGC</h6>
                 <div id="UGC" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="..." class="d-block w-100" alt="Es dawet">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="Es tape">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="Es teh">
+                            <main id="carousel-body" class="row-cols-3 d-flex justify-content-center align-items-center flex-wrap gap-1 ">
+                                <a href="https://www.roblox.com/catalog/70618449341249">
+                                    <img src="https://tr.rbxcdn.com/180DAY-334d07e9dec9377d9ff60e98a0290aed/420/420/Shirt/Webp/noFilter">
+                                </a>
+                                <a href="https://www.roblox.com/catalog/120785989587254">
+                                    <img src="https://tr.rbxcdn.com/180DAY-cd432eb4a07ab04189968f7debe72121/420/420/Shirt/Webp/noFilter">
+                                </a>
+                                <a href="https://www.roblox.com/catalog/104639158689761">
+                                    <img src="https://tr.rbxcdn.com/180DAY-bfac72dc9e115c78ee041414309b111e/420/420/Shirt/Webp/noFilter">
+                                </a>
+                                <a href="https://www.roblox.com/catalog/94747469163729">
+                                    <img src="https://tr.rbxcdn.com/180DAY-cdb97cc5aae51b8e25e864dbf34c83a3/420/420/Shirt/Webp/noFilter">
+                                </a>
+                            </main>
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#UGC" data-bs-slide="prev">
@@ -428,7 +452,7 @@
                     <h6 class="text-center mt-4">Jika pertanyaan anda tidak terjawab, silahkan hubungi kami melalui tombol di pojok kanan bawah halaman ini.</h6>
                     <div class="d-flex justify-content-center align-items-center gap-2 mt-3 mb-2">
                         Build with 
-                        <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none text-white gap-1">   
+                        <a href="https://getbootstrap.com/"  rel="noopener noreferrer" class="d-flex align-items-center text-decoration-none text-white gap-1">   
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118 94" role="img" class="d-block" height="24" width="28"> <title>Bootstrap</title> <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path> </svg>
                             Bootstrap 
                         </a>
@@ -496,6 +520,19 @@
         });
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+        function handleWindowSize() {
+            const element = document.getElementById('carousel-body'); // Ganti dengan selector elemen Anda
+            const threshold = 525;
+
+            if (window.innerWidth <= threshold) {
+                element.classList.add('row-cols-3');
+            } else {
+                element.classList.remove('row-cols-3');
+            }
+        }
+        handleWindowSize();
+        window.addEventListener('resize', handleWindowSize);
     </script>
 </body>
 </html>
