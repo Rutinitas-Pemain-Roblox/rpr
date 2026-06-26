@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Javanese:wght@400..700&family=Poppins&display=swap');
+
+.noto-sans-javanese {
+  font-family: "Noto Sans Javanese", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+    --RPR-Red: #ff0000;
+    --RPR-Orange: #ff370d;
+    --RPR-Yellow: #ff801e;
+}
+
+.jet-blue-bg {
+    background: #0D0D0D;
+}
+.soft-white-bg {
+    background: #fafafa;
+}
+
+.bg-primary {background: #1680F8 !important;}
+.text-primary {color: #1680F8 !important;}
+.btn-primary {background: var(--RPR-Orange) !important;}
+.btn-secondary {background: var(--RPR-Yellow) !important;}
+.text-white {color: #fafafa !important;}
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.max-content { width: max-content; }
+.navbar-pill { transition: all 0.3s ease; }
+.navbar-pill a:hover { color: #0d6efd !important; }
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+section.page {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 80px; 
+}
+
+.nav-container {
+    width: 90%;
+    max-width: 600px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    justify-content: space-between;
+}
+
+.nav-item-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 2px 8px;
+    transition: 0.2s;
+}
+
+.nav-item-link:hover, .nav-item-link.active {
+    color: #ffffff;
+}
+
+@media (max-width: 576px) {
+    .nav-container {
+        width: 95%;
+        padding: 8px 8px !important;
+    }
+    
+    .nav-links {
+        font-size: 0.75rem;
+        padding: 5px 10px !important;
+    }
+    
+    .nav-item-link {
+        padding: 2px 6px;
+    }
+
+    .nav-container {
+        justify-content: center;
+        width: max-content;
+    }
+}
+
+.section-snap {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px; 
+    overflow: hidden;
+}
+
+.bento-wrapper {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+        "desc desc hobby"
+        "edu avatar avatar"
+        "birth born town";
+    overflow-y: auto;
+    scroll-behavior: smooth;    
+}
+.bento-wrapper::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 8px;
+}
+.bento-wrapper::-webkit-scrollbar {
+    background: transparent;
+    width: 2px;
+}
+
+.item-desc { grid-area: desc; }
+.item-hobby { grid-area: hobby; }
+.item-edu { grid-area: edu; }
+.item-avatar { grid-area: avatar; }
+.item-birth {grid-area: birth;}
+.item-born {grid-area: born;}
+.item-town {grid-area: town;}
+
+.bento-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .bento-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 Kolom buat jejerin Hobi & Edu */
+        grid-template-areas: 
+            "desc desc"  
+            "edu hobby"   
+            "avatar avatar" 
+            "birth birth"
+            "born town";
+    }
+
+    .small-title {
+        font-size: 0.9rem;
+    }
+}
+
+.avatar-scroll {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding-bottom: 6px;
+    scroll-behavior: smooth;
+}
+.avatar-scroll::-webkit-scrollbar-thumb {
+    background: #6c757d;
+    border-radius: 8px;
+}
+.avatar-scroll::-webkit-scrollbar {
+    background: transparent;
+    height: 2px;
+}
+.avatar-item {
+    min-width: 100px;
+    height: 130px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+}
+.avatar-item div {
+    height: 100px;
+}
+
+.HX {
+    background-image: url(barang/Tak\ berjudul188_20260222204511.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.ATA {
+    background-image: url(barang/Tak\ berjudul53_20251111181133.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.MLNJ {
+    background-image: url(barang/Tak\ berjudul51_20251111170657.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
