@@ -1,0 +1,42 @@
+{
+    "own_games": [
+        {
+            "nama": "RPR HQ",
+            "by": "Rutinitas Pemain Roblox",
+            "link": "https://www.roblox.com/games/77229171829435",
+            "iconName" : "noFilter HQ.webp",
+            "coverName": "149241310_77229171829435_1774621764281.webp",
+            "groupAge": "16+",  
+            "membership": "true"
+        },
+        {
+            "nama": "Kampung Sobur",
+            "by": "Rutinitas Pemain Roblox",
+            "link": "https://www.roblox.com/games/104547722106842",
+            "iconName" : "noFilter.webp",
+            "coverName": "149241310_104547722106842_1779978464412.webp",
+            "groupAge": "16+",  
+            "membership": "false"
+        }
+    ],
+    "part_games": [
+        {
+            "nama": "Dance Now",
+            "by": "Neko Dev",
+            "link": "https://www.roblox.com/games/101348054552567",
+            "iconName" : "icon_v2_edit.webp",
+            "coverName": "noFiltericon.webp",
+            "groupAge": "16+",
+            "creatorLink": "https://www.roblox.com/share/g/92129138"
+        },
+        {
+            "nama": "Campus Voice",
+            "by": "Nikamunity Blox",
+            "link": "https://www.roblox.com/games/130888668399712",
+            "iconName" : "campusvoiceicongame.webp",
+            "coverName": "noFiltercampus.webp",
+            "groupAge": "16+",
+            "creatorLink": "https://www.roblox.com/share/g/35907761"
+        }
+    ]
+}
