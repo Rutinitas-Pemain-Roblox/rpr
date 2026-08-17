@@ -155,12 +155,24 @@ section.page {
     height: 100%;
 }
 
+.custom-home-height {
+    height: 80% !important;
+}
+
 @media (max-width: 768px) {
     .bento-wrapper {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
             "desc desc"
             "avatar avatar";
+    }
+
+    .custom-home-height {
+        height: calc(100% - 10rem) !important;
+    }
+
+    #games .bento-wrapper .bento-card, #store .bento-wrapper .bento-card, #about .item-avatar {
+        padding-left: 0.2rem; padding-right: 0.2rem;
     }
 
     .small-title {

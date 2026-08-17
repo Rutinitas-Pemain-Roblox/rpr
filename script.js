@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             hd5.textContent = `${item.nama}`;
                             if (kategoriKey === "part_games") {
                                 gameDesc.innerHTML = `by <a href="${item.creatorLink}" rel="noopener noreferrer" class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" target="_blank">${item.by}</a>`;
-                            } else {gameDesc.innerText = `by ${item.by}`;}
+                            } else { gameDesc.innerText = `by ${item.by}`; }
                             playGame.href = `${item.link}`;
                             playGame.innerHTML = '<i class="bi bi-caret-right-fill"></i> Play';
                             groupAge.textContent = `${item.groupAge}`;
@@ -427,6 +427,10 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(res => res.json())
         .then(files => {
             const imageFiles = files.filter(file => file.type === "file");
+            for (let i = imageFiles.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [imageFiles[i], imageFiles[j]] = [imageFiles[j], imageFiles[i]];
+            }
             imageFiles.forEach((file, index) => {
                 if (file.type === "file") {
                     const div = document.createElement('div');
@@ -446,7 +450,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function copyText(idToCopy, btnElement) {
-    // Pastikan ID diubah menjadi string (jika di JSON ditulis berupa angka/number)
     const textString = String(idToCopy).trim();
 
     if (!textString || textString === 'undefined') {
@@ -454,7 +457,6 @@ function copyText(idToCopy, btnElement) {
         return;
     }
 
-    // Helper visual feedback
     const showSuccess = () => {
         if (!btnElement) return;
         const textDiv = btnElement.querySelector('div') || btnElement;
@@ -467,8 +469,6 @@ function copyText(idToCopy, btnElement) {
             btnElement.classList.remove('btn-success');
         }, 1500);
     };
-
-    // Pilihan 1: Clipboard API Modern
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(textString)
             .then(showSuccess)
@@ -477,7 +477,6 @@ function copyText(idToCopy, btnElement) {
                 fallbackCopy(textString, showSuccess);
             });
     } else {
-        // Pilihan 2: Fallback execCommand
         fallbackCopy(textString, showSuccess);
     }
 };
