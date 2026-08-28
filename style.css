@@ -157,6 +157,7 @@ section.page {
 
 .custom-home-height {
     height: 80% !important;
+    width: 50% !important;
 }
 
 @media (max-width: 768px) {
@@ -169,6 +170,7 @@ section.page {
 
     .custom-home-height {
         height: calc(100% - 10rem) !important;
+        width: 100% !important;
     }
 
     #games .bento-wrapper .bento-card, #store .bento-wrapper .bento-card, #about .item-avatar {
