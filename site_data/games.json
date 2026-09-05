@@ -21,6 +21,15 @@
     ],
     "part_games": [
         {
+            "nama": "Campus Voice",
+            "by": "Nikamunity Blox",
+            "link": "https://www.roblox.com/games/130888668399712",
+            "iconName" : "campusvoiceicongame.webp",
+            "coverName": "noFiltercampus.webp",
+            "groupAge": "16+",
+            "creatorLink": "https://www.roblox.com/share/g/35907761"
+        },
+        {
             "nama": "Dance Now",
             "by": "Neko Dev",
             "link": "https://www.roblox.com/games/101348054552567",
@@ -30,13 +39,13 @@
             "creatorLink": "https://www.roblox.com/share/g/92129138"
         },
         {
-            "nama": "Campus Voice",
-            "by": "Nikamunity Blox",
-            "link": "https://www.roblox.com/games/130888668399712",
-            "iconName" : "campusvoiceicongame.webp",
-            "coverName": "noFiltercampus.webp",
+            "nama": "Bloxter Ground",
+            "by": "Time4Creations",
+            "link": "https://www.roblox.com/games/121481501955775",
+            "iconName" : "bloxtergroundicon.webp",
+            "coverName": "bloxtergroundthumb.webp",
             "groupAge": "16+",
-            "creatorLink": "https://www.roblox.com/share/g/35907761"
+            "creatorLink": "https://www.roblox.com/share/g/35957389"
         }
     ]
 }
