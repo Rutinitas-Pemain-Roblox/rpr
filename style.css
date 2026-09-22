@@ -293,19 +293,19 @@ section.page {
 }
 
 .g-staff div {
-    background-color: #382D00 !important;
+    background-color: #381600 !important;
 }
 
 .g-staff article p span {
-    border: 1px #ffaf00 solid;
-    background-color: #382D00 !important;
+    border: 1px #ff6300 solid;
+    background-color: #381600 !important;
 }
 
 .card .bi-award-fill, .bi-diagram-2-fill {color: #fd4c3f;}
 .card .bi-code-slash {color: #15f6dc;}
 .card .bi-facebook, .bi-whatsapp, .bi-discord {color: #ff5500;}
 .card .bi-shield-fill {color: #ffd901;}
-.card .bi-flag-fill {color: #ffaf00;}
+.card .bi-flag-fill {color: #ff6300;}
 
 .ugc-img-fit {
     object-fit: cover;
